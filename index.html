@@ -1,1 +1,239 @@
 # Digital-Media-Portfolio
+<html>
+<head>
+	<style type = "text/css">
+		#bg {
+			position: relative;
+			width: 101.5%;
+			left: -1%;
+			top: -8%;
+			z-index: -1;
+		}
+		#main {
+			position: relative;
+		}
+		#bee {
+			position: relative;
+			margin-top: -4.3%;
+			margin-left: 3.8%;
+			z-index: -1;
+		}
+		
+		#flower {
+			position: relative;
+			margin-left: 3.8%;
+			z-index: -1;
+		}
+
+		#po {
+			position: relative;
+			margin-left: 3.8%;
+			z-index: -1;
+		}
+
+		#dm {
+			position: relative;
+			margin-left: 3.8%;
+			z-index: -1;
+		}
+
+		.preview {
+		  filter: blur(2px) grayscale(30%);		
+		  width: 97%; /* width of container */
+		  height: 103%; /* height of container */
+		  object-fit: cover;
+		}
+
+		/* text */
+
+		body {
+		  font-family: "Lato", sans-serif;
+		}
+
+		h2 {
+		  font-size: 26px;
+		  color: #ffffff;
+		  margin: 5%;
+		}
+
+		a {
+		  text-decoration: none;
+		}
+
+		/* drop down menu*/
+
+		.sidebar {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidebar a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 14px;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidebar a:hover {
+		  color: #f1f1f1;
+		}
+
+		.sidebar .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 25px;
+		  margin-left: 50px;
+		}
+
+		.openbtn {
+		  position: fixed;
+		  font-size: 40px;
+		  cursor: pointer;
+		  background-color: #FFFFFF;
+		  color: #7C7C7C;
+		  padding: 10px 15px 100% 15px;
+		  border: none;
+		}
+
+		.openbtn:hover {
+		  color: #5B5B5B;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  margin-left: -0.7%;
+		  margin-top: -0.7%;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+		  .sidebar {padding-top: 18px;}
+		  .sidebar a {font-size: 18px;}
+		}
+
+		/* brief descripition */
+		.transbox {
+			position: absolute;
+			width: 35%;
+			left: 11%;
+		 	margin: 30px;
+		 	background-color: #000000;
+		 	opacity: 0.8;
+
+		}
+		
+		.b1 {
+			top: 130%;
+		}
+
+		.b2 {
+			top: 230%;
+		}
+
+
+		.b3 {
+			top: 330%;
+		}
+
+		.b4 {
+			top: 430%;
+		}
+
+
+
+		.transbox:hover {
+			transform: scale(1.2);
+			transition: 0.5s;
+		}
+
+		.transbox p {
+		 	margin: 5%;
+		 	font-weight: bold;
+		 	color: #ffffff;
+		}
+
+		html {
+			scroll-behavior: initial;
+		}
+
+
+	</style>
+
+</head>
+
+<body>	
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()">☰</button>  
+	</div>
+	
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="index.html">Home</a>
+	  <a href="pk.html">Design 1: Bee and Flowers</a>
+	  <a href="g6.html">Design 2: Aesthetic Flowers</a>
+	  <a href="highSchool.html">Design 3: Polaroids</a>
+	  <a href="dm.html">Design 4: Degital Media Page</a>
+	</div>
+
+	<script>
+	function openNav() {
+	  document.getElementById("mySidebar").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "0";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidebar").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "-0.7%";
+	}
+
+	</script>
+	
+	<!-- cover -->
+	<img src = "images/background.png" id = "bg"></img>
+
+	<!-- deisgn 1 -->
+	<img class = "preview" src = "images/bee1.png" id = "bee"></img>
+	
+	<a href="pk.html"><div class="transbox b1">
+	    <h2>Design 1 Concept: Bee and Flowers</h2>
+	    <p>This is a design for pre-kindergarten students. Hexagons are used to create a beehive while flowers and bees are used as decorations. </p>
+	</div></a>
+
+	<!-- deisgn 2 -->
+	<img class = "preview" src = "images/flower1.jpg" id = "flower"></img>
+	
+	<a href="g6.html"><div class="transbox b2">
+	    <h2>Design 2: Aesthetic Flowers</h2>
+	    <p>This is a design for middle school students. Aesthetic flowers are used as frames of the individual pictures and as decorations. </p>
+	</div></a>
+
+	<!-- deisgn 3 -->
+	<img class = "preview" src = "images/polaroid.png" id = "po"></img>
+	
+	<a href="highSchool.html"><div class="transbox b3">
+	    <h2>Design 3: Polaroids</h2>
+	    <p>This is a design for high school students. A sky background and polaroids are used for the student pictures. </p>
+	</div></a>
+
+	<!-- deisgn 4 -->
+	<img class = "preview" src = "images/DigitalMedia.png" id = "dm"></img>
+	
+	<a href="dm.html"><div class="transbox b4">
+	    <h2>Design 4 Concept: Degital Media Page</h2>
+	    <p>This is a design for the Digital Media Class who created the yearbook. A simple design is used to show what the class does throughout the school year. </p>
+	</div></a>
+
+
+</body>
+</html>
