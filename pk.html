@@ -1,0 +1,222 @@
+<html>
+<head>
+<style>
+	
+	body {
+		  font-family: "Lato", sans-serif;
+		  background-color: #FFF9DF;
+	}
+
+	h2 {
+		font-size: 30px;
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+
+	p {
+		font-size: 16px;
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+
+	/* The grid: Four equal columns that floats next to each other */
+	.column {
+	  float: left;
+	  width: 17%;
+	  padding: 0.5%;
+	}
+
+	/* Style the images inside the grid */
+	.column img {
+	  opacity: 0.5;
+	  position: relative;
+	  width: 100%;
+	  cursor: pointer;
+	}
+
+	.column img:hover {
+	  opacity: 1;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+	  display: table;
+	  clear: both;
+	}
+
+	/* The expanding image container (positioning is needed to position the close button and the text) */
+	.container {
+	  position: absolute;
+	  width: 52.8%;
+	  margin: 0.5%;
+	  top: 25%;
+	  left: 45.5%;
+	  display: none;
+	}
+
+	/* Expanding image text */
+	#imgtext {
+	  position: absolute;
+	  bottom: 15px;
+	  left: 15px;
+	  color: white;
+	  font-size: 20px;
+	}
+
+	/* Closable button inside the image */
+	.closebtn {
+	  position: absolute;
+	  top: 10px;
+	  right: 15px;
+	  color: white;
+	  font-size: 35px;
+	  cursor: pointer;
+	}
+
+	/* drop down menu*/
+
+		.sidebar {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidebar a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 14px;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidebar a:hover {
+		  color: #f1f1f1;
+		}
+
+		.sidebar .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 25px;
+		  margin-left: 50px;
+		}
+
+		.openbtn {
+		  position: fixed;
+		  font-size: 40px;
+		  cursor: pointer;
+		  background-color: #FFFFFF;
+		  color: #7C7C7C;
+		  padding: 10px 15px 100% 15px;
+		  border: none;
+		}
+
+		.openbtn:hover {
+		  color: #5B5B5B;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  margin-left: -0.7%;
+		  margin-top: -0.7%;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+		  .sidebar {padding-top: 18px;}
+		  .sidebar a {font-size: 18px;}
+		}
+
+</style>
+</head>
+<body>
+
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()">☰</button>  
+	</div>
+	
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="index.html">Home</a>
+	  <a href="pk.html">Design 1: Bee and Flowers</a>
+	  <a href="g6.html">Design 2: Aesthetic Flowers</a>
+	  <a href="highSchool.html">Design 3: Polaroids</a>
+	  <a href="dm.html">Design 4: Degital Media Page</a>
+	</div>
+
+	<script>
+	function openNav() {
+	  document.getElementById("mySidebar").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "0";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidebar").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "-0.7%";
+	}
+
+	function myFunction(imgs) {
+	  // Get the expanded image
+	  var expandImg = document.getElementById("expandedImg");
+	  // Get the image text
+	  var imgText = document.getElementById("imgtext");
+	  // Use the same src in the expanded image as the image being clicked on from the grid
+	  expandImg.src = imgs.src;
+	  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+	  imgText.innerHTML = imgs.alt;
+	  // Show the container element (hidden with CSS)
+	  expandImg.parentElement.style.display = "block";
+	}
+
+	</script>
+
+	<!-- context 
+
+	<img src = "images/bee1.png" id = "bee1"></img>
+	<img src = "images/bee2.png" id = "bee2"></img>
+	<img src = "images/bee3.png" id = "bee3"></img>
+	-->
+
+
+	<!-- The grid: 3 columns -->
+	<div class="row">
+	  <div class="column" style="width: 43% ; padding-left: 2%;">
+	    <h2>Design 1 Concept: Bee and Flowers</h2>
+	    <p style="font-size: 14px;">Click on the images on the right to view different pages of the design →</p>
+	    <p>Using hexagons and other elements, the design incorperates the concept of bee and flower. The hexagon combines to become a beehive, which creates a grid for all of the individual student photos. The color scheme of the deisgn is orange and yellow, which are th colors of the beehive. Bee and flower cliparts are also used in the design so that the page will not look too empty. The elements that were added make the design look more lively and cute. For the daily life page, we added borders with the colors of the flower elements that we used in the individual picture page so that the theme is consistant. </p>
+	  </div>
+	  <div class="column">
+	    <img src="images/bee1.png" onclick="myFunction(this);">
+	  </div>
+	  <div class="column">
+	    <img src="images/bee2.png" onclick="myFunction(this);">
+	  </div>
+	  <div class="column">
+	    <img src="images/bee3.png" onclick="myFunction(this);">
+	  </div>
+
+
+
+	<!-- The expanding image container -->
+	<img src="images/bee1.png" style="position: absolute; width: 52.8%; margin: 0.5%; top: 25%; left: 45.5%;">
+	<div class="container">
+	  <!-- Close the image -->
+	  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+	  <!-- Expanded image -->
+	  <img id="expandedImg" style="width:100%">
+
+	  <!-- Image text -->
+	  <div id="imgtext"></div>
+	</div>
+
+</body>
+</html>
